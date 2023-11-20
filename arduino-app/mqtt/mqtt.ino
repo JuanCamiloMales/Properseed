@@ -11,7 +11,7 @@ unsigned long currentMillis = 0;    // Tiempo de ejecucion actual del programa
 unsigned long previousMillis = 0;   // Tiempo de ejecucion en el que se enviaron los ultimos datos
 
 int lectura;        // Valor obtenido del pin
-char datos[60];      // Datos para publicar en la red
+char datos[200];      // Datos para publicar en la red
 
 void setup() {
   Serial.begin(115200); // Puerto serial de alta frecuencia
@@ -27,9 +27,10 @@ void loop()
   currentMillis = millis();
   if (currentMillis - previousMillis >= 10000) // Se evalua si a pasado 10 s.
   {
-      String dataStr = construirJSON(obtenerFechaHora(), "\"data\":\"datos\"", latitude, longitude);
-      dataStr.toCharArray(datos, 60);
-      publicar(datos);
+    String dataStr = construirJSON(obtenerFechaHora(), "\"data\":\"datos\"", latitude, longitude);
+    dataStr.toCharArray(datos, 200);
+    publicar(datos);
+    previousMillis = currentMillis;
   }
 }
 
