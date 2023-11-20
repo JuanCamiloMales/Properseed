@@ -1,0 +1,85 @@
+.device_card {
+  max-width: 300px;
+  max-height: 300px;
+  /* border: 1px solid black; */
+  border-radius: 15px;  
+}
+
+.device_card_header {
+
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px;
+  text-align: center;  
+  /*height: 30vh;*/
+}
+
+.device_card_header img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  clip-path: circle(50%);
+
+  /*border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;*/
+}
+
+.device_card_header_id {
+  color: rgb(248, 51, 84);
+  font-weight: 900;
+}
+
+.device_card_header_crop {
+  font-size: xx-large;
+  display: block;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+}
+
+.device_card_footer {
+  /* border: 1px solid black; */
+  border-radius: 0px 0px 15px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px;
+  text-align: center;
+  color: black;
+}
+
+.device_card_footer_first,
+.device_card_footer_second {
+ margin: 10px;
+}
+
+.device_card_footer_third {
+  margin: 10px;
+  height: max-content;  
+ }
+
+.label_name {
+  font-weight: 400;
+  display: block;
+}
+
+
+.label_value {
+  font-weight: 900;
+  font-size: large;
+  display: block;
+  margin: 10px 0px;
+}
+
+.device_location {
+  font-weight: 600;
+  font-size: large;  
+}
+
+.device_status {
+  font-weight: 900;
+  font-size: xx-large;  
+}
