@@ -49,7 +49,7 @@ String construirJSON(String fechaHora, String data, float latitud, float longitu
   datosS += ",";
   datosS += "\"user_id\":"+ user_id;
   datosS += ",";
-  datosS += "\"fecha\":"+ fechaHora;
+  datosS += "\"fecha\":\""+ fechaHora + "\"";
   datosS += ",";
   datosS += data;
   datosS += ",";
