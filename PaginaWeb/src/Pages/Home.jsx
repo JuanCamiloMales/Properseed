@@ -10,6 +10,8 @@ import { FaTemperatureThreeQuarters } from "react-icons/fa6";
 import { IoRainy } from "react-icons/io5";
 import { RiWaterPercentLine } from "react-icons/ri";
 
+import SimplePopup from './SimplePopup';
+
 export default function Home() {
   //devices
   const devices = [
@@ -17,28 +19,28 @@ export default function Home() {
       deviceId: 1,
       deviceName: "Café 1",
       ubication: [2.44635, -76.59885],
-      cropAsoc: "Café",      
+      cropAsoc: "Café",
       battLevel: "100 %",
-      deviceState: "Activo", 
+      deviceState: "Activo",
       deviceLocation: ["Popayán", "Cauca"]
     },
     {
       deviceId: 2,
       deviceName: "Café 2",
       ubication: [2.44734, -76.59921],
-      cropAsoc: "Café",      
+      cropAsoc: "Café",
       battLevel: "100 %",
       deviceState: "Activo",
-      deviceLocation: ["Popayán", "Cauca"]      
+      deviceLocation: ["Popayán", "Cauca"]
     },
-    {      
+    {
       deviceId: 3,
       deviceName: "Café 3",
       ubication: [2.44722, -76.59811],
-      cropAsoc: "Café",      
+      cropAsoc: "Café",
       battLevel: "70 %",
       deviceState: "Activo",
-      deviceLocation: ["Popayán", "Cauca"] 
+      deviceLocation: ["Popayán", "Cauca"]
     }
   ];
 
@@ -57,42 +59,81 @@ export default function Home() {
 
   };
 
-
+  const notifications = [
+    {
+      notifId: 1,
+      notifDeviceID: 1,
+      notifDeviceName: "Café 1",
+      date: "21/11/2023",
+      time: "12:30 pm",
+      notifcropAsoc: "Café",
+      variable: "Temperatura",
+      type: "Alto",  
+      state: false,    
+    },
+    {
+      notifId: 2,
+      notifDeviceID: 1,
+      notifDeviceName: "Café 1",
+      date: "21/11/2023",
+      time: "12:55 pm",
+      notifcropAsoc: "Café",
+      variable: "Temperatura",
+      type: "Alto",      
+      state: false,
+    },
+    {
+      notifId: 3,
+      notifDeviceID: 1,
+      notifDeviceName: "Café 1",
+      date: "21/11/2023",
+      time: "12:55 pm",
+      notifcropAsoc: "Café",
+      variable: "Lluvias",
+      type: "Bajo",  
+      state: false,   
+    },
+  ]
   return (
-    <>
+    <div className='Home'>
       <div className="App">
         <VarCard
           varIcon={<FaTemperatureThreeQuarters
-            size="4rem"
-            color="#273746"
+            size="3rem"
+            color="#000000"
           />}
           constentHead="+24 °C"
           varName="Temperatura"
           views="7"
           varEval="Adecuado"
-          color="rgb(77, 204, 87)"
+          color="#C3F8B4"
         />
         <VarCard
           varIcon={<RiWaterPercentLine
-            size="4rem"
-            color="#273746"
+            size="3rem"
+            color="#000000"
           />}
 
           constentHead="72 %"
           varName="Humedad"
           views="11"
           varEval="Alto"
-          color="red"
+          color="#f4cccc"
         />
         <VarCard
-          varIcon={<IoRainy size="4rem"
-            color="#273746" />}
+          varIcon={<IoRainy size="3rem"
+            color="#000000" />}
           constentHead="2 mm"
           varName="Lluvia"
           views="4"
           varEval="Bajo"
-          color="rgb(224, 204, 4)"
-        /></div>
+          color="#cfe2f3"
+        />
+        <SimplePopup
+          notifications={notifications}
+        ></SimplePopup>
+
+      </div>
 
       <div className='map_container'>
 
@@ -115,12 +156,12 @@ export default function Home() {
                 <Popup className='custom-popup'>
                   <DeviceCard
                     imgSrc="https://cdn.pixabay.com/photo/2016/06/28/22/29/coffee-1485596_960_720.jpg"
-                    deviceId= {device.deviceId}
+                    deviceId={device.deviceId}
                     ubication={device.ubication}
                     deviceName={device.deviceName}
                     cropAsoc={device.cropAsoc}
                     battLevel={device.battLevel}
-                    deviceState ={device.deviceState} 
+                    deviceState={device.deviceState}
                     deviceLocation={device.deviceLocation}
                   />
                   {//marker.popUp
@@ -133,6 +174,6 @@ export default function Home() {
           </MarkerClusterGroup>
 
         </MapContainer>
-      </div></>
+      </div></div>
   );
 }
