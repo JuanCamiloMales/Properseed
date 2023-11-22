@@ -11,7 +11,7 @@ export default function Card({
   color
 }) {
   return (
-    <div className="var_card">
+    <div style={{ backgroundColor: color }} className="var_card">
 
       <div className="var_card_body">
         <div className="var_card_body_icon">
@@ -21,7 +21,7 @@ export default function Card({
           <h1 className="var_card_body_text">{constentHead}</h1>
         </div>
       </div>
-      <div style={{ backgroundColor: color }} className="var_card_footer">
+      <div className="var_card_footer">
         <div className="var_card_footer_first">
           <div>
             <p>{varName}</p>

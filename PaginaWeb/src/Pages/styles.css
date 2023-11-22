@@ -13,6 +13,13 @@ body {
   background: white;
 }
 
+.Home {
+  background-color: rgb(238, 242, 246);
+  padding: 20px 20px 0px 20px;
+  margin: 10px 20px 0px 20px;
+  border-radius: 12px 12px 0px 0px;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -37,11 +44,10 @@ body {
   height: 100vh;
 }
 
-.custom-popup {
-  background-color: #3498db;  
+.custom-popup {   
   color: #fff;
   border-radius: 10px;  
-  padding: 10px;    
+     
   width: fit-content;
 }
 
@@ -57,7 +63,7 @@ body {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #eeeeee;
   transform: translate(-25%, -25%);
   display: flex;
   justify-content: center;
