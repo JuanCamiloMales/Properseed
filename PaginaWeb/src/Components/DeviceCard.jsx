@@ -20,10 +20,10 @@ export default function DeviceCard ({ Name, Ubication, Battery, Plant, Temperatu
         <span style={{ paddingLeft: '15px', color: '#78bd48', fontWeight: '600' }} > {Name} </span>
       </div>
       <div style={{ paddingLeft: '40px', paddingTop: '5px' }}>
-        <CardInfo Text={Ubication.toString() } Icon='map.png'/>
-        <CardInfo Text={Battery} Icon='battery.png'/>
-        <CardInfo Text={Plant }Icon='plant.png'/>
-        <CardInfo Text={Temperature} Icon='hot.png'/>
+        <CardInfo Text={Ubication.toString() } Icon='/map.png'/>
+        <CardInfo Text={Battery} Icon='/battery.png'/>
+        <CardInfo Text={Plant }Icon='/plant.png'/>
+        <CardInfo Text={Temperature} Icon='/hot.png'/>
       </div>
     </div>
   )

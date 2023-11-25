@@ -35,7 +35,7 @@ export default function Mapa () {
 
 const customIcon = new Icon(
   {
-    iconUrl: './public/Icon_Farm_Color.png',
+    iconUrl: '/Icon_Farm_Color.png',
     iconSize: [80, 80]
   }
 )
