@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "name": "Café 1",
+    "plant": "Café",
+    "ubication": [2.44635, -76.59885],
+    "battery": "100 %",
+    "temperature": 23,
+    "deviceState": "Activo",
+    "deviceLocation": ["Popayán", "Cauca"]
+  },
+  {
+    "Id": 2,
+    "name": "Café 2",
+    "plant": "Café",
+    "ubication": [2.44734, -76.59921],
+    "battery": "100 %",
+    "temperature": 23,
+    "deviceState": "Activo",
+    "deviceLocation": ["Popayán", "Cauca"]
+  },
+  {
+    "Id": 3,
+    "name": "Café 3",
+    "ubication": [2.44722, -76.59811],
+    "plant": "Café",
+    "battery": "70 %",
+    "temperature": 23,
+    "deviceState": "Activo",
+    "deviceLocation": ["Popayán", "Cauca"]
+  }
+]
