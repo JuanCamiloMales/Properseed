@@ -20,7 +20,7 @@ export default function Chart () {
         </div>
         </div>
       <div style={{ display: 'flex', justifyContent: 'center', borderTop: '1px solid rgb(230, 230, 230)' }} >
-        <img style={{ height: '400px', width: '60%' }} src='/public/humedad.png' />
+        <img style={{ height: '400px', width: '60%' }} src='humedad.png' />
       </div>
     </div>
   )
